@@ -1,22 +1,21 @@
 # gif-steam-emotes
 
-Assets for **FaFa_EmotesMenu** (FaFaDev / Tebex).
+Assets for **FaFa_EmotesMenu** (FaFaDev / Tebex) — **one resource only**.
 
 ## What is in this repo
 
 | Path | Role |
 |------|------|
-| `FaFa_EmotesMenu_Stream/` | FiveM resource — props & custom emotes (`stream/`). **Drag into `resources/`**. |
-| `previews/` | GIF/PNG emote previews. Served via CDN (jsDelivr) — **no need to download** for players. |
+| `stream/` | Props & custom emotes. Copy **into** `FaFa_EmotesMenu/stream/`. |
+| `previews/` | GIF/PNG emote previews. Served via CDN (jsDelivr) — **no need to download**. |
 
 ## Install (buyers)
 
-1. Download this repo (Code → Download ZIP) or clone it.
-2. Copy the folder `FaFa_EmotesMenu_Stream` into your server `resources/` (next to `FaFa_EmotesMenu`).
-3. In `server.cfg`:
+1. Install `FaFa_EmotesMenu` from Tebex / Keymaster.
+2. If your zip has no `stream/` folder: download this repo → copy the `stream/` folder **inside** `FaFa_EmotesMenu/` (so you get `FaFa_EmotesMenu/stream/...`).
+3. `server.cfg`:
 
 ```cfg
-ensure FaFa_EmotesMenu_Stream
 ensure FaFa_EmotesMenu
 ```
 
@@ -28,5 +27,5 @@ ensure FaFa_EmotesMenu
 
 ## Dev notes
 
-- Do not put `previews/` or `stream/` back into the Tebex escrow zip — keep that package light.
-- After updating GIFs, bump / refresh jsDelivr cache if needed: append `@main` or a commit SHA in `previewCdn.baseUrl`.
+- Keep `previews/` and `stream/` out of the Tebex escrow zip so it stays light.
+- After updating GIFs, refresh jsDelivr if needed (commit SHA in `previewCdn.baseUrl`).
